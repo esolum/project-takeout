@@ -1,0 +1,107 @@
+<ion-view view-title="Order">
+  <ion-content>
+
+  	<script>
+		jQuery(document).ready(function(){
+		    // This button will increment the value
+		    $('.qtyplus').click(function(e){
+		        // Stop acting like a button
+		        e.preventDefault();
+		        // Get the field name
+		        fieldName = $(this).attr('field');
+		        // Get its current value
+		        var currentVal = parseInt($('input[name='+fieldName+']').val());
+		        // If is not undefined
+		        if (!isNaN(currentVal)) {
+		            // Increment
+		            $('input[name='+fieldName+']').val(currentVal + 1);
+		        } else {
+		            // Otherwise put a 0 there
+		            $('input[name='+fieldName+']').val(0);
+		        }
+		    });
+		    // This button will decrement the value till 0
+		    $(".qtyminus").click(function(e) {
+		        // Stop acting like a button
+		        e.preventDefault();
+		        // Get the field name
+		        fieldName = $(this).attr('field');
+		        // Get its current value
+		        var currentVal = parseInt($('input[name='+fieldName+']').val());
+		        // If it isn't undefined or its greater than 0
+		        if (!isNaN(currentVal) && currentVal > 0) {
+		            // Decrement one
+		            $('input[name='+fieldName+']').val(currentVal - 1);
+		        } else {
+		            // Otherwise put a 0 there
+		            $('input[name='+fieldName+']').val(0);
+		        }
+		    });
+		});	
+	</script>
+
+  <div class="list">
+  	<div class="item text-center">
+	    <h1>Jackfruit Tacos</h1>
+	  </div>
+
+	  <div class="list card">
+			
+		  <div class="item item-image">
+		    <img src="img/jackfruit.jpg">
+		  </div>
+		  <div class="row">
+		  	<div class="col col-80">
+			  <div class="item item-avatar">
+			    <img src="img/monroe.png">
+			    <h2>Monroe Chabrier</h2>
+			    <div class="subdued">
+					<p><i class="icon ion-location energized"></i> 0.3 miles&nbsp;&nbsp;<i class="icon ion-clock positive"></i> 2pm - 4pm</p>
+			    </div>
+			  </div>
+	  		</div>
+		  	<div class="col col-center">
+		  		<p class="text-right"><font color="green">$3.95</font></p>
+		  	</div>
+	  	  </div>
+		</div>
+
+  	<div class="row">
+	  <div class="col col-50 text-center">Quantity</div>
+	  <div class="col text-center"><button class="button button-energized qtyminus button-small">-</button></div>
+	  <div class="col text-center"><h5 class="qty">2</h5></div>
+	  <div class="col text-center"><button class="button button-energized qtyplus button-small">+</button></div>
+	</div>
+
+
+
+	<div class="row">
+	  <div class="col text-center">Total</div>
+	  <div class="col text-center">$7.90</div>
+	</div>
+
+	<div class="row">
+	  <div class="col text-center">Pickup Time</div>
+	  <div class="col text-center">4:00pm</div>
+	</div>
+
+
+	<center>
+		<a href="#/app/menu"><button class="button button-positive">
+		  Complete Order
+		</button>
+	</center>
+  	
+    
+
+
+    <link rel="stylesheet" type="text/css" href="../css/order.css">
+	<!-- Quantity Button -->  
+	<script src="../js/order.js"></script>  
+ 	
+</div>
+
+  </ion-content>
+</ion-view>
+
+

@@ -1,0 +1,102 @@
+<ion-view view-title="New Meal">
+  <ion-content>
+
+    <label class="item item-input">
+    	<input type="text" placeholder="Dish Name">
+  	</label>
+
+  	<label class="item item-input">
+    	<input type="text" placeholder="Description">
+  	</label>
+
+  	<label class="item item-input">
+    	<input type="text" placeholder="Ingredients">
+  	</label>
+
+  	<div class="row">
+	  <div class="col text-center">price</div>
+	  <div class="col col-6 text-center"><button class="button button-energized button-small qtyminus">-</button></div>
+	  <div class="col col-9 text-center"><font class="qty" size="2">$5.00</font></div>
+	  <div class="col col-6 text-center"><button class="button button-energized button-small qtyplus">+</button></div>
+
+	  <div class="col text-center">#</div>
+	  <div class="col col-6 text-center"><button class="button button-energized button-small qtyminus">-</button></div>
+	  <div class="col col-9 text-center"><h5 class="qty">11</h5></div>
+	  <div class="col col-6 text-center"><button class="button button-energized button-small qtyplus">+</button></div>
+	</div>
+
+	<div class="row">
+	  <div class="col text-center">from</div>
+	  <div class="col col-6 text-center"><button class="button button-energized button-small qtyminus">-</button></div>
+	  <div class="col col-9 text-center"><h6 class="qty">5:00 pm</h6></div>
+	  <div class="col col-6 text-center"><button class="button button-energized button-small qtyplus">+</button></div>
+
+	  <div class="col text-center">to</div>
+	  <div class="col col-6 text-center"><button class="button button-energized button-small qtyminus">-</button></div>
+	  <div class="col col-9 text-center"><h6 class="qty">8:00 pm</h6></div>
+	  <div class="col col-6 text-center"><button class="button button-energized button-small qtyplus">+</button></div>
+	</div>
+
+	<div class="row">
+		<div class="col col-50 text-center"><h5>Date Cooking: </h5></div>
+		<div class="col text-right"><h5>1/17/16</h5></div>
+		<div class="col text-left"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Calendar_font_awesome.svg/512px-Calendar_font_awesome.svg.png" style="width:30px;height:30px;"></div>
+	</div>
+
+	<div class="row">
+		<div class="col text-center" >Live</div>
+		<div class="col text-center"><label class="toggle toggle-energized">
+	       <input type="checkbox">
+	       <div class="track">
+	         <div class="handle"></div>
+	       </div>
+	     </label></div>
+		<div class="col text-center">Pre-Order</div>
+	</div>
+
+	<style>
+		h5.leadTime {
+		    padding-left: 42px;
+		} 
+	</style>
+     
+	<div class="row">
+		<div class="col col-50 text-left"><h5 class="leadTime">Lead Time: </h5></div>
+		<div class="col text-center"><button class="button button-energized button-small qtyminus">-</button></div>
+	  	<div class="col text-center"><h5 class="qty">30 m</h5></div>
+	  	<div class="col text-center"><button class="button button-energized button-small qtyplus">+</button></div>
+	</div>
+
+	<div class="row">
+	  <div class="col text-center">
+		  	<ion-list>
+			  <ion-checkbox class="checkbox-balanced" ng-model="filter.vegan">Vegan</ion-checkbox>
+			  <ion-checkbox class="checkbox-balanced" >Vegetarian</ion-checkbox>
+			  <ion-checkbox class="checkbox-balanced" >Local</ion-checkbox>
+			</ion-list></div>
+	  <div class="col text-center"><ion-list>
+			  <ion-checkbox class="checkbox-balanced" >Lactose-Free</ion-checkbox>
+			  <ion-checkbox class="checkbox-balanced" >Organic</ion-checkbox>
+			  <ion-checkbox class="checkbox-balanced" >Gluten Free</ion-checkbox>
+			</ion-list></div>
+	</div>
+
+	<center>
+		<button class="button button-royal">
+		  Upload Image
+		</button>
+	</center>
+
+	<div class="row" >
+		<div class="col text-right">
+			<a class="button button-positive" href="#/app/browse">
+		  		Submit
+			</a> </div>
+		<div class="col text-left">
+			<a class="button button-light text-left" href="#/app/profile-chef-view" >
+		  		Cancel
+			</a> </div>
+	</div>
+
+  </ion-content>
+</ion-view>
