@@ -1,0 +1,12 @@
+{
+  "name": "projectTakeout",
+  "app_id": "939b3416",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
